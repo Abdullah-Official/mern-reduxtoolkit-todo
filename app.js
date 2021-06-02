@@ -26,9 +26,7 @@ mongoose.connection.on("error", (err) => {
   console.log("Database dropped", err);
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
+
 
 const requireLogin = (req, res, next) => {
   const { authorization } = req.headers;
