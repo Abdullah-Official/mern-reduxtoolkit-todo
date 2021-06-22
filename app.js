@@ -74,11 +74,11 @@ app.post("/signin", async (req, res) => {
   const { email, password } = req.body;
   try {
     if (!email || !password) {
-      return res.status(422).json({ error: "Please add all fields." });
+      return res.status(422).json({ error: "Please add all FIELDS." });
     }
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(404).json({ error: "User doesn't exists" });
+      return res.status(404).json({ error: "User DOESN't exists" });
     }
     const doMatch = await bcrypt.compare(password, user.password);
     if (doMatch) {
