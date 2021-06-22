@@ -27,7 +27,7 @@ function Auth() {
                  <div className="indeterminate"></div>
              </div>
             )}
-            <h1>please {auth}!</h1>
+            <h1 style={{color:'red'}}>please {auth}!</h1>
             {error && (<h5>{error}</h5>)}
             <input 
             type="email"

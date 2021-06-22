@@ -26,7 +26,7 @@ function Todo() {
 
     return (
         <div className="container">
-         <h1>TODO APPLICATION</h1>
+         <h1 style={{color:'red'}}>TODO APPLICATION</h1>
          <input type="text"
          placeholder="Write todo here .."
          value={myTodo}

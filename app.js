@@ -7,6 +7,7 @@ const Todo = require("./models/todo.js");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const {JWT_SECRET, MONGOURI} = require('./config/keys');
+const cors = require('cors')
 
 mongoose.connect(
   MONGOURI,
@@ -18,6 +19,7 @@ mongoose.connect(
 );
 
 app.use(express.json());
+app.use(cors())
 
 mongoose.connection.on("connected", () => {
   console.log("Database Connected");
